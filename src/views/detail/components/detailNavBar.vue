@@ -1,0 +1,40 @@
+<template>
+    <div>
+      <nav-bar>
+        <div slot="center">详情页</div>
+      </nav-bar>
+    </div>
+</template>
+
+<script>
+import NavBar from '@components/common/navbar/NavBar.vue'
+export default {
+    props: {
+
+    },
+    components: {
+      NavBar
+    },
+    data() {
+        return {
+
+        };
+    },
+    computed: {
+
+    },
+    created() {
+
+    },
+    methods: {
+
+    },
+    mounted() {
+
+    },
+};
+</script>
+
+<style scoped>
+
+</style>

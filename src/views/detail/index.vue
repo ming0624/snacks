@@ -1,28 +1,29 @@
 <template>
-    <div class="swiper-item">
-      <slot></slot>
+    <div class="detail">
+      <detail-nav-bar></detail-nav-bar>
+      详情页{{goodId}}
     </div>
 </template>
-
+  
 <script>
+import DetailNavBar from './components/detailNavBar.vue'
 export default {
-  name:'swiper-item',
     props: {
 
     },
     components: {
-
+      DetailNavBar
     },
     data() {
         return {
-
+          goodId: ''
         };
     },
     computed: {
 
     },
     created() {
-
+      this.goodId = this.$route.params.id;
     },
     methods: {
 
@@ -34,11 +35,5 @@ export default {
 </script>
 
 <style scoped>
-  .swiper-item{
-    width: 100%;
-  }
-  .swiper-item img{
-    width: 100%;
-    height: 200px;
-  }
+  
 </style>

@@ -130,7 +130,6 @@ export default {
 <style scoped>
   .swiper{
     position: relative;
-    margin-top: 46px;
     overflow: hidden;
   }
   .swiper .swiper-item-group > div{

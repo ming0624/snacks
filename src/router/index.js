@@ -5,6 +5,7 @@ const Home = () => import('@views/home');
 const Cart = () => import('@views/cart');
 const Category = () => import('@views/category');
 const Porfile = () => import('@views/porfile');
+const Detail = () => import('@views/detail');
 Vue.use(VueRouter);
 
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
     path: "/porfile",
     name: "porfile",
     component: Porfile
+  },
+  {
+    path: "/detail/:id",
+    name: "detail",
+    component: Detail
   }
 ];
 
