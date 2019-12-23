@@ -1,7 +1,6 @@
 <template>
     <div id="home">
         <nav-bar>
-            <div slot="left">返回</div>
             <div slot="center">零食铺</div>
         </nav-bar>
         <tab-control class='fixed' v-show="isTabFixed" :titles="['流行','新品','精选']" ref="tabControl1"  @tabClick="tabClick"></tab-control>
@@ -32,7 +31,7 @@
 <script>
 import NavBar from '@components/common/navbar/NavBar.vue';
 import Scroll from '@components/common/scroll/index.vue';
-import Swiper from './components/Swiper.vue';
+import Swiper from '@components/common/swiper/Swiper.vue';
 import recommedView from './components/recommedView.vue';
 import featureView from './components/featureView.vue';
  
@@ -175,9 +174,13 @@ export default {
     },
     activated() {
         console.log('active')
+        this.$refs.scroll.scroll.scrollTo(0, this.scrollY,0);
+        this.$refs.scroll.refresh();
     },
     deactivated() {
         console.log('deactivated')
+        this.scrollY = this.$refs.scroll.getCurrentY();
+        console.log(this.scrollY)
     },
     mounted() {
         for(var i =0; i < 20; i++){

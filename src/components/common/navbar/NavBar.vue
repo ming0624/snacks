@@ -46,12 +46,13 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f5f5f5;
+    background: #fff;
     padding: 0 15px;
+    border-bottom:1px solid #e6e6e6; 
   }
   .nav-bar .left,.nav-bar .right{
     font-size: 16px;

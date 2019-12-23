@@ -1,5 +1,5 @@
 <template>
-    <div class="scroll-wrapper" ref="scrollWrapper">
+    <div class="scroll-wrapper" :style='currentstyle' ref="scrollWrapper">
       <div class="scroll-content">
         <slot></slot>
       </div>
@@ -14,6 +14,12 @@ export default {
         type:Number,
         default() {
           return 0;
+        }
+      },
+      currentstyle: {
+        type: Object,
+        default() {
+          return {bottom: '49px'}
         }
       },
       pullUpLoad: {
@@ -77,10 +83,13 @@ export default {
     /* height: calc(100vw - 95px); */
     position: absolute;
     top: 46px;
-    bottom: 49px;
     left: 0;
     right: 0;
+    bottom: 49px;
     background: red;
+    z-index: 2;
+    overflow: hidden;
+    background: #fff;
     /* border: 2px solid black; */
   }
   .scroll-content{

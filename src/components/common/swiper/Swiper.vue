@@ -55,19 +55,6 @@ export default {
     },
     methods: {
       setSwiperWidth() {
-        // this.children = this.$refs.swiperItemGroup.children;
-        // let width = 0;
-        // let sliderWidth = this.$refs.swiper.clientWidth;
-        // for (let i = 0; i < this.children.length; i++) {
-        //   let child = this.children[i];
-        //   child.style.width = sliderWidth + "px";
-        //   width += sliderWidth;
-        // }
-        // if (this.loop) { // 当设置无缝循环轮播的时候, 默认加两张图片的宽度方便滚动
-        //   width += 2 * sliderWidth;
-        // }
-        // // 设置轮播图的总宽度
-        // this.$refs.swiperItemGroup.style.width = width + "px";
         //获取swiper里面的所有子元素
         this.children = this.$refs.swiperItemGroup.children;
         this.dots = this.children.length;
